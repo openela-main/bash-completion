@@ -1,0 +1,27 @@
+diff --git a/completions/Makefile.am b/completions/Makefile.am
+--- a/completions/Makefile.am
++++ b/completions/Makefile.am
+@@ -315,7 +315,7 @@ bashcomp_DATA = 2to3 \
+ 		reportbug \
+ 		_reptyr \
+ 		resolvconf \
+-		rfkill \
++		_rfkill \
+ 		ri \
+ 		rmlist \
+ 		rmmod \
+diff --git a/completions/rfkill b/completions/_rfkill
+similarity index 86%
+rename from completions/rfkill
+rename to completions/_rfkill
+--- a/completions/rfkill
++++ b/completions/_rfkill
+@@ -1,5 +1,8 @@
+ # bash completion for rfkill                               -*- shell-script -*-
+ 
++# Use of this file is deprecated on systems with util-linux >= 2.31, which
++# ships completion for the rfkill included with it.
++
+ _rfkill()
+ {
+     local cur prev words cword
